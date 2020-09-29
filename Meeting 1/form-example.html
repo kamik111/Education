@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form example</title>
+    <style>
+        form {
+            margin: 25px auto;
+            width: 100%;
+            max-width: 700px;
+        }
+        form fieldset legend,
+        form fieldset label:not(.inline) {
+            display: block;
+        }
+        form fieldset {
+            margin-bottom: 15px;
+        }
+        form fieldset label {
+            margin: 8px 0;
+        }
+        form label.valign > * {
+            vertical-align: middle;
+        }
+        form button {
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://echo.htmlacademy.ru/" method="POST">
+
+        <fieldset>
+            <legend>
+                Personal information
+            </legend>
+            <label>
+                <span>Surname</span>
+                <input type="text" name="surname" minlength="1" autocomplete="off" required>
+            </label>
+            <label>
+                <span>Name</span>
+                <input type="text" name="name" minlength="1" autocomplete="off" required>
+            </label>
+            <label>
+                <span>How old are you?</span>
+                <input type="number" name="years">
+            </label>
+            <label>
+                <span>Full date of birth</span>
+                <input type="date" name="birthday">
+            </label>
+            <label class="valign">
+                <span>I accept the term of the agreement</span>
+                <input type="checkbox" name="agreement" required>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Registration
+            </legend>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="email@example.com" required>
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="password" required>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                An interesting fact about you!
+            </legend>
+            <span>Do you love cats?</span>
+            <label class="inline">
+                <input type="radio" name="cats">
+                <span>Yes</span>
+            </label>
+            <label class="inline">
+                <input type="radio" name="cats">
+                <span>No</span>
+            </label>
+            <label>
+                <span>What is you favorite color?</span>
+                <input type="color" name="favorite color">
+            </label>
+            <label>
+                <span>What time do you ggo to bed?</span>
+                <input type="time" name="bed time">
+            </label>
+            <label>
+                <span>What are your favorite brand of cars?</span>
+                <select name="cars brand" multiple>
+                    <option value="BMW" selected>BMW</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Lada">Lada</option>
+                </select>
+            </label>
+            <label>
+                <span>How do you rate our work?</span>
+                <input type="range" min="1" max="10" name="our rate">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Additional info:
+            </legend>
+            <label>
+                <span>Comments:</span>
+                <textarea name="Comments" rows="2"  maxlength="100"></textarea>
+            </label>
+            <label>
+                <span>Would you recommend us?</span>
+                <select name="recommend us">
+                    <option value="Yes" selected>Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
