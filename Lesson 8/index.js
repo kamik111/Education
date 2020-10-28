@@ -75,7 +75,7 @@ MakeCalendar.prototype.init = function () {
     this.firstDateInMonth = new Date(this.year, this.month - 1, 1);
     this.firstDayInMonth = this.firstDateInMonth.getDay();
 
-    // const shiftFirstDay = calendar.firstDayInMonth === 0 ? 6 : calendar.firstDayInMonth - 1;
+    // const shiftFirstDay = this.firstDayInMonth === 0 ? 6 : this.firstDayInMonth - 1;
     const shiftFirstDay = (this.firstDayInMonth + 6) % 7;
 
     this.firstDisplayDate = new Date(this.year, this.month - 1, 1 - shiftFirstDay);
@@ -126,7 +126,7 @@ MakeCalendar.prototype.createDayElement = function (elementDate, curentMonthNumb
     return rootElement;
 }
 
-const calendar = new  MakeCalendar('.test-calendar');
+const calendar = new MakeCalendar('.test-calendar');
 const calendar2 = new MakeCalendar('.second-calendar', 2020, 8);
 
 console.log( 'calendar', calendar );
